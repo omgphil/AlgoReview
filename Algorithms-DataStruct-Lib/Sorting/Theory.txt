@@ -1,0 +1,11 @@
+﻿Bubble Sort
+
+you need 3 iterators, I, J and the wall. the process is you buble the biggest value to the top
+
+In-Place algorith
+uses a small amount of extra memory(doesn't depend on n)
+
+Stable, if it doesnt change relative order or items
+
+O(n^2) time complexity quadratic
+Degrades quickly

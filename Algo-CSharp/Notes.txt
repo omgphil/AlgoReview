@@ -1,0 +1,40 @@
+﻿Abstract Data Types (ADT)
+
+- Abstract Description of how a specific set of data can be organized and which operations
+can be performed on it.
+
+- A data structure is a concrete implementation of an ADT
+- For example, an ADT can describe a stack as a datatype which allows to store and perform push, pop and peek operations.
+- Stack has abstract def and concrete implementation
+- Data structures are based on primitive types
+- Stacks are last in first out LIFO
+
+Intro to Algo
+-> Algorithm is a correctly defined computational procedure which has an input and output
+-> Sequence of steps to go from an input to an output
+-> We need algorithms for problem solving
+-> An algorithm is always formalized and it non-ambiguously define the computational procedure for reaching the desired results
+
+Algorithms are correct if correct input gives the correct output
+Algo include 
+	•	Description of a correct input
+	•	Full Description of computational steps
+	•	Description of correct output
+Algorithms often provide implementations in pseudo code
+
+Intro to algorithm analysis
+Time complexity, 
+Common Operations
+Access an element
+Adding element to beginning or end
+Insert element
+Update element
+Remove element
+Big O values for an Array
+Access by index -> O(1) // Constant
+Search	-> O(n) Implies For Loop
+Add Element to full array -> O(n) you need to resize array
+Add Element to array that has space -> O(1) if you know the index, else its O(n)
+Insert or Update -> O(1) if you know the index, else its O(n)
+Remove by nulling -> O(1) if you know the index, else its O(n)
+Remove by shift -> O(n) array needs to be resized
