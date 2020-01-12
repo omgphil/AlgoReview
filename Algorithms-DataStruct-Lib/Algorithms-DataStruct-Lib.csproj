@@ -5,12 +5,4 @@
     <RootNamespace>Algorithms_DataStruct_Lib</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Sorting\Theory.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Sorting\Theory.txt" />
-  </ItemGroup>
-
 </Project>
