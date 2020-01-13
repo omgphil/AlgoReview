@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Interview_Review.DataStructures.Lists;
+using Interview_Review.DataStructures.Lists.LinkList;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,7 @@ namespace Interview_Review
     {
         public static void Main(string[] args)
         {
+            
             
         }
 
@@ -25,7 +28,6 @@ namespace Interview_Review
             {
                 factorial *= i;
             }
-
             return factorial;
         }
 
