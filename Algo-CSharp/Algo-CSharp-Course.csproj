@@ -50,6 +50,8 @@
     <Compile Include="DataStructures\Lists\LinkList\Node.cs" />
     <Compile Include="DataStructures\Lists\LinkList\SinglyLinkedList.cs" />
     <Compile Include="DataStructures\Lists\ListDemo.cs" />
+    <Compile Include="DataStructures\Stacks\ArrayStack.cs" />
+    <Compile Include="DataStructures\Stacks\LinkedStack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -58,7 +60,9 @@
     <None Include="DataStructures\Lists\Linked List.docx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataStructures\Stacks\Notes.txt" />
     <Content Include="Notes.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
