@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Algorithms_DataStruct_Lib.Stacks;
 using NUnit.Framework;
 
-namespace Algorithms.DataStruct.Lib.Tests.Stacks
+namespace AlgorithmsDataStruct_lib.Tests
 {
     [TestFixture]
     public class LinkedStackTests

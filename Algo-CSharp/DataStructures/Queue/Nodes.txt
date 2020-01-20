@@ -1,0 +1,22 @@
+﻿
+Queue
+-	FIFO (First-in, First-out)
+-	Enqueue – Add an Item to the end of the Queue
+-	Dequeue – Remove an item at the front of the Queue
+-	Peek – Get an Item at the front of the Queue without removing it
+
+Big O
+-	Peek Works for O(1) in any cases
+-	If backed up by a LinkedList: Enqueue and Dequeue will be O(1)
+-	If backed up by an array, Then Enqueue and Dequeue:
+	o	If enough space Enqueue O(1) else O(n) 
+	o	Dequeue O(1) if we never shrink else O(N)
+-	If there is enough mem on device or we don’t know the max number of Items then use a LinkedList else use Array
+
+Circular Queue
+
+Wrapped the tail gies behind the head, once the last element is full you unwrap the array to double it in size
+
+Built in Queues
+
+- Queue Built in as a circular based on Array

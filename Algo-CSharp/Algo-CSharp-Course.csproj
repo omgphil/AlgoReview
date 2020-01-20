@@ -50,6 +50,9 @@
     <Compile Include="DataStructures\Lists\LinkList\Node.cs" />
     <Compile Include="DataStructures\Lists\LinkList\SinglyLinkedList.cs" />
     <Compile Include="DataStructures\Lists\ListDemo.cs" />
+    <Compile Include="DataStructures\Queue\ArrayQueue.cs" />
+    <Compile Include="DataStructures\Queue\CircularQueue.cs" />
+    <Compile Include="DataStructures\Queue\LinkedQueue.cs" />
     <Compile Include="DataStructures\Stacks\ArrayStack.cs" />
     <Compile Include="DataStructures\Stacks\LinkedStack.cs" />
     <Compile Include="Program.cs" />
@@ -60,6 +63,7 @@
     <None Include="DataStructures\Lists\Linked List.docx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataStructures\Queue\Nodes.txt" />
     <Content Include="DataStructures\Stacks\Notes.txt" />
     <Content Include="Notes.txt" />
   </ItemGroup>
