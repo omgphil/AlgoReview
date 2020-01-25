@@ -5,4 +5,8 @@
     <RootNamespace>Algorithms_DataStruct_Lib</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Algo-Csharp\Algo-CSharp-Course.csproj" />
+  </ItemGroup>
+
 </Project>

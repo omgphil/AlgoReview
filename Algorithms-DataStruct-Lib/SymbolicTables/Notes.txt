@@ -1,0 +1,43 @@
+﻿Symbol Tables
+
+- We need fast action to information
+- its a Table where you store Key Pair Values
+- Often Refered to Dictionaries
+
+
+A key doesnt have to be an interger
+Consists of key/value pairs and data types dont have to match
+Four ways of implementing [3 are competative and one is trivial]
+
+
+API of Symbol tables
+
+2 Categories, Ordered and Unordered
+Both need to support
+-	A default constructor, allows client to pass custom comparer
+-	Bool TryGet(Tkey key) – returns true if found
+-	Void Add(tkey key, Tvalue val) – inserts a key-value pair into table
+-	Bool Remove(TKEY key) – removes a key-value pair
+-	Bool Contains(TKEY key) – Check if a certain Key is present in a table
+-	Bool isEmpty() - Aux method that checks if its empty
+-	Int Count() – counts number of pairs
+-	Ienumerable<tkey> keys – returns all the keys
+Differences
+-	Ordered symbol tables support special feature that are not avail in unordered lists
+Ordered
+Min() 
+MAX()
+RemoveMin()
+RemoveMax() 
+Floor() – Get greatest key less or equal to requested key
+Ceiling() – Get greatest key Greater or equal to requested key
+Rank– counts less than requested key
+
+
+Searching and Inserting (get and ADD) O(N)
+
+
+Binary Search Symbol Table
+
+- in worst and avg search its in log time
+- insertion in worst is 2n
