@@ -1,0 +1,43 @@
+﻿Hashing
+Hash Functions allow to map data of arbitrary size to data of a fixed size
+“Abcdef” ->(hashing) 1
+Well though function that guarantees to generate same output of same input.
+Normally used for cryptography
+
+When building data structure on hashes solve 2 algo
+1.	Find Hashing Algorithm that generates different indexes for diff keys in a way that collisions occur rarely (collision is when 2 keys have the same hash)
+2.	Find an algorithm of resolving collisions 
+
+Hash function significantly depends on the type of keys
+-	Integer 
+-	Floats
+-	Strings
+-	Custom value types or structures
+-	Custom ref types or classes
+All types inherit from object type
+Custom types are based on primitive types that get override GetHascode (custom types can override this)
+There is a default implementation of GetHasCode, 
+Key words are aliases for types int = int32, short = int16
+
+Guideline for strings
+-	Hash code should not be used outside domain created
+-	Not used as key fields
+-	Not be persistent
+If two objects are equal, methods can return identical values. Diff strings can return the same has code
+The hash code itself isn’t stable
+Practical Guidelines GetHashCode
+-	GetHashCode is used for only putting object in hash table
+-	Equal items should have equal hashes (if hashes are = you need to compare equality)
+-	Int returned by GetHashCode must not change while object is contained in a data structure that depends on the hash code
+-	Must never throw an exception 
+Good hash code implementation should be:
+-	Fast
+-	Well distributed across the space of 32-bit integers
+Do not use hash codes:
+-	As a unique key for an object
+-	As part of a digital signature or as a password equiv.
+
+Value and Reference Types
+-	Highly recommended to override GetHashCode for custom val types
+-	Reference and value types have a default implementation
+
