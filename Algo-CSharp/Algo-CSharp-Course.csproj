@@ -55,6 +55,7 @@
     <Compile Include="DataStructures\Queue\LinkedQueue.cs" />
     <Compile Include="DataStructures\Stacks\ArrayStack.cs" />
     <Compile Include="DataStructures\Stacks\LinkedStack.cs" />
+    <Compile Include="Hashing.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

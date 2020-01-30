@@ -41,3 +41,5 @@ Value and Reference Types
 -	Highly recommended to override GetHashCode for custom val types
 -	Reference and value types have a default implementation
 
+
+Remember Duplicate Keys are not Allowed
