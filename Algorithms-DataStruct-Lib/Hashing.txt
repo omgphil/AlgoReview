@@ -43,3 +43,29 @@ Value and Reference Types
 
 
 Remember Duplicate Keys are not Allowed
+
+
+Resolving Collisions
+-	Separate Chaining
+-	Open Addressing (Keeping the ratio of elements to the bucket size between 1/8 up to 1/2, the number of probes will vary between 1.5 and 2.5) 
+
+Separate Chaining
+-	Good Hash codes distribution is required for good perf
+-	Number of keys is ~ = n/m (n = num of keys, M = num of chains)
+-	Search and Insert works N/M ~= 1
+
+Built in Dictionaries
+-	Dictionary implements IDictionary
+-	They don’t allow duplicate elements
+-	Dictionary keeps elements unsorted
+-	HashSet is Dictionary without values
+
+Sets
+A set is an unordered collection of Items, no duplicate
+-	Intersection = Common items
+-	Unions = merge the sets
+-	Differences = find diff items
+-	Supersets
+-	Subset
+Implement ISet interface
+Hastset / Sorted Set
