@@ -30,7 +30,7 @@ namespace Interview_Review
 
             Console.WriteLine(customers.ContainsKey(number1));
 
-            number1.AreaCode = "141805";
+            //number1.AreaCode = "141805";
             Console.WriteLine(customers.ContainsKey(number1));
 
             Console.WriteLine("After Adding Phone Numbers");
