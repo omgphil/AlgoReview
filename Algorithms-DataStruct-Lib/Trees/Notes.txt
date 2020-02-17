@@ -34,3 +34,32 @@ Removal (3 Cases)
 	o	Case: Take the max from left subtree and the replacement has left children
 	o	Case: Take the min from the right subtree and replacement has no children
 	o	Case: Take the min from the right subtree and replacement has right children
+
+------
+
+Heap
+-	Special case of a binary tree
+-	Binary should be complete (every level is filled)
+-	Max Heap: every parent node >= children (Max is the root)
+-	Min Heap: every parent node <= children (Min is the root)
+-	Heaps are implemented as arrays
+-	Heapifying – the process of converting a binary tree into a heap
+-	No condition between siblings
+
+Heaps and Arrays
+-	We can store heaps as arrays
+-	Root goes to array [0]
+-	Traversing, we put values from left to right at each level sequentially
+
+For the node @ array [i]
+Left = 2i + 1
+Right = 2i + 2
+Parent = (i-1) / 2
+
+Insertion into Heap: Theory
+-	Add new item to end of array
+-	Then heapify
+	o	Compare new item with parent
+	o	If item > parent – swap
+	o	Repeat until order is defined
+
