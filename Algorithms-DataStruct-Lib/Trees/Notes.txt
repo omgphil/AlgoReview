@@ -63,3 +63,15 @@ Insertion into Heap: Theory
 	o	If item > parent – swap
 	o	Repeat until order is defined
 
+Remove from Heap
+-	We need a replacement for the item being removed
+-	To keep tree complete take rightmost value
+-	If replacement is > parent -> fix upwards (swim)
+-	If replacement is < parent -> fix downwards (sink)
+
+Insert: O(log(n))
+Remove: O(log(n))
+Peek: O (1)
+
+Heap Sort
+-	Based on concept of heap
