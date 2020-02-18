@@ -41,3 +41,9 @@ Binary Search Symbol Table
 
 - in worst and avg search its in log time
 - insertion in worst is 2n
+
+Sieve of Eratosthenes
+1.	Create a list of consecutive integers from 2 through n
+2.	Initially p=2 (smallest prime number)
+3.	Enumerate the multiples of P by counting in increments of p from p, and cross them out in the list
+4.	Find the first number greater than p in the list that’s not crossed out. If no num then stop, otherwise, p is the new number (next prime) rinse repeat step 3
