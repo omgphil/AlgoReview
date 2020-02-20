@@ -61,11 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="DataStructures\Lists\Linked List.docx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataStructures\Queue\Nodes.txt" />
-    <Content Include="DataStructures\Stacks\Notes.txt" />
     <Content Include="Notes.txt" />
   </ItemGroup>
   <ItemGroup />
