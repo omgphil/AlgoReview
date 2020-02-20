@@ -1,7 +1,0 @@
-﻿Binary Search
-- Data Must be sorted before searching
-- Takes the middle and compares, 
-if equal - done
-if ele > value search left
-if ele < value search right
-rince repeat undtil you find solution

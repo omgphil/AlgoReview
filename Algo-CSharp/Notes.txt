@@ -38,3 +38,339 @@ Add Element to array that has space -> O(1) if you know the index, else its O(n)
 Insert or Update -> O(1) if you know the index, else its O(n)
 Remove by nulling -> O(1) if you know the index, else its O(n)
 Remove by shift -> O(n) array needs to be resized
+
+Linked List
+•	Head – First Node
+•	Tail – Last Node
+•	Operation
+	o	Add
+	o	Remove
+	o	Find
+	o	Enumerate
+Singly Linked List (Pointer only to next in the chain
+Add First – you shift and add to the head node
+Add Last – you shift the pointer of the tail
+Remove last – set last pointer to null and move the tail
+
+.Net BLC has a built in Linked List  use this – this is a Doubly-linked Circular List
+
+Queue
+-	FIFO (First-in, First-out)
+-	Enqueue – Add an Item to the end of the Queue
+-	Dequeue – Remove an item at the front of the Queue
+-	Peek – Get an Item at the front of the Queue without removing it
+
+Big O
+-	Peek Works for O(1) in any cases
+-	If backed up by a LinkedList: Enqueue and Dequeue will be O(1)
+-	If backed up by an array, Then Enqueue and Dequeue:
+	o	If enough space Enqueue O(1) else O(n) 
+	o	Dequeue O(1) if we never shrink else O(N)
+-	If there is enough mem on device or we don’t know the max number of Items then use a LinkedList else use Array
+
+Circular Queue
+
+Wrapped the tail goes behind the head, once the last element is full you unwrap the array to double it in size
+
+Built in Queues
+
+- Queue Built in as a circular based on Array
+Stacks
+	•	Abstract Data Type (ADT)
+	•	Implements LIFO – “Last-In First-Out”
+	•	Operations:
+		o	Push: Add item to the top
+		o	Pop: remove top item
+		o	Peek: Get top item without removing it. 
+	•	Can be backed up by an array or a linked list
+Peek works for O(1) all cases
+If backed up by a LinkedList: push pop work for O(1)
+If backed by an array
+	-	If enough space Push - O (1) else O(n) because of array resizing
+	-	Pop is O(1) if we never shrink the array else its O(n)
+If there is enough mem on device or max num is unknown LinkedList is preferable as a structure
+If not enough mem or max num know array is preferable
+
+
+Built in Stacks in C#
+Import Stack<T> works the same way as we built it
+Built in stack is based on an Array
+Trim excess only works if there is 90% used
+Binary Search
+	- Data Must be sorted before searching
+	- Takes the middle and compares, 
+if equal - done
+if element > value search left
+if element < value search right
+rinse repeat until you find solution
+
+Bubble Sort
+
+you need 3 iterators, I, J and the wall. the process is you bubble the biggest value to the top
+
+In-Place algorithm
+uses a small amount of extra memory (doesn't depend on n)
+
+Stable, if it doesn’t change relative order or items
+
+O(n^2) time complexity quadratic
+Degrades quickly
+
+	
+Stable vs Unstable Sorting
+If the relative order (of duplicated items) is preserved = stabled, otherwise unstable.
+
+Selection Sort
+You select either the largest or smallest element in the array, like bubble sort there is a Wall as a limit.
+	-	In-place algorithm (uses small amount of extra mem [doesn’t depend on n])
+	-	Unstable
+	-	Quadratic Time Complexity
+	-	Degrades quickly
+
+Insertion Sort
+Uses a wall again set to 1, all elements to the left side of the wall are considered sorted. You save the unsorted value and inserted in and shift and insert it into the sorting array. If next value is greater than the end it will skip the loop and just increment the data.
+	-	In-place algorithm (uses small amount of extra mem [doesn’t depend on n])
+	-	Stable
+	-	Quadratic Time Complexity
+	-	Degrades quickly
+
+Recursion
+	-	Recursive function is a function that calls itself
+	-	Base case to terminate recursive calls
+	-	Classic example is factorial
+			o	3! = 3*2*1=6
+	-	Depth of recursion is bound; it stays on the stack.
+	-	Can have a stack overflow (CLR will terminate rampant calls)
+
+
+Shell Sort
+	-	Based on Insertion Sort
+	-	Insertion is fast on pre-sorted arrays
+	-	Basic Idea: pre-sort the input and switch to Insertion Sort
+	-	Gap is used for pre-sorting => Swap distant elements
+	-	Sort starts with a large gap and reduces it gradually
+	-	When gap =1 sort finishes and sort start
+	-	Performance depends on gap value. 99% of cased you can use universal gap. To calculate the max gap < N/3 (where N is the length of the array)
+	-	In-place Algo
+	-	Unstable
+
+Merge Sort (one of the fastest algo)
+	-	Divide and Conquer
+	-	Two phases: splitting and merging
+	-	Splitting is logical: provides an organized way to sequence the merge.
+	-	Split left side first then the right side, then you merge 2 sorted arrays.
+	-	Not an in-place, uses extra mem (n length)
+	-	Stable in a classic implementation
+	-	Linearithmic O(nlogn)
+
+Quick Sort
+	-	Based on Divide and conquer
+	-	Recursive
+	-	Left and Right side contain unsorted elements that are Greater than or less than the pivot
+		o	Elements < pivot left
+		o	Elements > go right
+	-	In-Place
+	-	Linearithmic O(nlogn)
+	-	Unstable
+
+Symbol Tables
+
+- We need fast action to information
+- its a Table where you store Key Pair Values
+- Often Refered to Dictionaries
+
+
+A key doesnt have to be an interger
+Consists of key/value pairs and data types dont have to match
+Four ways of implementing [3 are competative and one is trivial]
+
+
+API of Symbol tables
+
+2 Categories, Ordered and Unordered
+Both need to support
+-	A default constructor, allows client to pass custom comparer
+-	Bool TryGet(Tkey key) – returns true if found
+-	Void Add(tkey key, Tvalue val) – inserts a key-value pair into table
+-	Bool Remove(TKEY key) – removes a key-value pair
+-	Bool Contains(TKEY key) – Check if a certain Key is present in a table
+-	Bool isEmpty() - Aux method that checks if its empty
+-	Int Count() – counts number of pairs
+-	Ienumerable<tkey> keys – returns all the keys
+Differences
+-	Ordered symbol tables support special feature that are not avail in unordered lists
+Ordered
+Min() 
+MAX()
+RemoveMin()
+RemoveMax() 
+Floor() – Get greatest key less or equal to requested key
+Ceiling() – Get greatest key Greater or equal to requested key
+Rank– counts less than requested key
+
+
+Searching and Inserting (get and ADD) O(N)
+
+
+Binary Search Symbol Table
+
+- in worst and avg search its in log time
+- insertion in worst is 2n
+
+Sieve of Eratosthenes
+1.	Create a list of consecutive integers from 2 through n
+2.	Initially p=2 (smallest prime number)
+3.	Enumerate the multiples of P by counting in increments of p from p, and cross them out in the list
+4.	Find the first number greater than p in the list that’s not crossed out. If no num then stop, otherwise, p is the new number (next prime) rinse repeat step 3
+
+Hashing
+Hash Functions allow to map data of arbitrary size to data of a fixed size
+“Abcdef” ->(hashing) 1
+Well though function that guarantees to generate same output of same input.
+Normally used for cryptography
+
+When building data structure on hashes solve 2 algo
+1.	Find Hashing Algorithm that generates different indexes for diff keys in a way that collisions occur rarely (collision is when 2 keys have the same hash)
+2.	Find an algorithm of resolving collisions 
+
+Hash function significantly depends on the type of keys
+-	Integer 
+-	Floats
+-	Strings
+-	Custom value types or structures
+-	Custom ref types or classes
+All types inherit from object type
+Custom types are based on primitive types that get override GetHascode (custom types can override this)
+There is a default implementation of GetHasCode, 
+Key words are aliases for types int = int32, short = int16
+
+Guideline for strings
+-	Hash code should not be used outside domain created
+-	Not used as key fields
+-	Not be persistent
+If two objects are equal, methods can return identical values. Diff strings can return the same has code
+The hash code itself isn’t stable
+Practical Guidelines GetHashCode
+-	GetHashCode is used for only putting object in hash table
+-	Equal items should have equal hashes (if hashes are = you need to compare equality)
+-	Int returned by GetHashCode must not change while object is contained in a data structure that depends on the hash code
+-	Must never throw an exception 
+Good hash code implementation should be:
+-	Fast
+-	Well distributed across the space of 32-bit integers
+Do not use hash codes:
+-	As a unique key for an object
+-	As part of a digital signature or as a password equiv.
+
+Value and Reference Types
+-	Highly recommended to override GetHashCode for custom val types
+-	Reference and value types have a default implementation
+
+
+Remember Duplicate Keys are not Allowed
+
+
+Resolving Collisions
+-	Separate Chaining
+-	Open Addressing (Keeping the ratio of elements to the bucket size between 1/8 up to 1/2, the number of probes will vary between 1.5 and 2.5) 
+
+Separate Chaining
+-	Good Hash codes distribution is required for good perf
+-	Number of keys is ~ = n/m (n = num of keys, M = num of chains)
+-	Search and Insert works N/M ~= 1
+
+Built in Dictionaries
+-	Dictionary implements IDictionary
+-	They don’t allow duplicate elements
+-	Dictionary keeps elements unsorted
+-	HashSet is Dictionary without values
+
+Sets
+A set is an unordered collection of Items, no duplicate
+-	Intersection = Common items
+-	Unions = merge the sets
+-	Differences = find diff items
+-	Supersets
+-	Subset
+Implement ISet interface
+Hastset / Sorted Set
+
+
+A tree can be abstract datatype (ADT) and a data structure
+Hierarchy data structure with nodes
+A tree is a special case of a graph.
+And example is a Linked List
+Elements with no children are called Leaf Nodes, Links are called edges
+Every tree consists of one or more subtrees
+Notes, Tree can’t have cyclic paths (circle path)
+Depth is number of edges in a path
+Height is the longest path to a leaf
+
+Binary Tree
+•	Each node has 0, 1 or 2 children
+•	Left child and Right child
+•	Binary Search tree is used in practice
+
+Left child contains nodes less than the parent, right is greater or equal
+•	Left child < Parent 
+•	Right child > Parent
+•	Left subtree contains only values that are less than the Parent
+•	Right subtree contains only values that are greater than the Parent
+•	Binary Search gives log(n) for insert, delete and retrieval
+
+4 ways to traverse a tree
+-	Level: go through every level.
+-	In-order: go left first, then root, then to the right. 
+-	Pre-order: Visit the root of every subtree first.
+-	Post-order: Visit the root of every subtree last.
+
+Removal (3 Cases)
+-	Node is a Leaf
+-	Node has one child
+-	Node has 2 children: Choose replacement node from left or right subtree
+	o	Case: Take the max from left subtree and the replacement has no children
+	o	Case: Take the max from left subtree and the replacement has left children
+	o	Case: Take the min from the right subtree and replacement has no children
+	o	Case: Take the min from the right subtree and replacement has right children
+
+------
+
+Heap
+-	Special case of a binary tree
+-	Binary should be complete (every level is filled)
+-	Max Heap: every parent node >= children (Max is the root)
+-	Min Heap: every parent node <= children (Min is the root)
+-	Heaps are implemented as arrays
+-	Heapifying – the process of converting a binary tree into a heap
+-	No condition between siblings
+
+Heaps and Arrays
+-	We can store heaps as arrays
+-	Root goes to array [0]
+-	Traversing, we put values from left to right at each level sequentially
+
+For the node @ array [i]
+Left = 2i + 1
+Right = 2i + 2
+Parent = (i-1) / 2
+
+Insertion into Heap: Theory
+-	Add new item to end of array
+-	Then heapify
+	o	Compare new item with parent
+	o	If item > parent – swap
+	o	Repeat until order is defined
+
+Remove from Heap
+-	We need a replacement for the item being removed
+-	To keep tree complete take rightmost value
+-	If replacement is > parent -> fix upwards (swim)
+-	If replacement is < parent -> fix downwards (sink)
+
+Insert: O(log(n))
+Remove: O(log(n))
+Peek: O (1)
+
+Heap Sort
+-	Based on concept of heap
+
