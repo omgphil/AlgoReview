@@ -374,3 +374,25 @@ Peek: O (1)
 Heap Sort
 -	Based on concept of heap
 
+Immutable and Concurrent Collections
+Intro
+•	Concurrent access to collection is very sensitive from the performance point of view
+•	Immutable and concurrent collection
+•	Immutable collections are collections that can never change
+•	Modifying an immutable collection, you get a newly created list each time
+•	Immutable collections share most of their mem
+•	It’s a nuget package
+•	We can use synchronization primitives and non blocking techniques to make it thread safe
+
+Immutability and Memory Pressure
+-	Immutable collections have very good performance in general
+-	In extreme cases(performance), you’d better avoid immutability
+
+Immutable Stack and Queue
+Concurrent Bag
+-	Bag is a data structure that is used in multi-threaded
+-	Doesn’t guarantee any sequence
+-	Absence of guarantees it can demonstrate good performance
+-	Keeps Items in seperate collectins, one collection per thread
+-	No need for thread sync since no contention
+-	When personal collection is empty the thread remove an item beloning to another collection
